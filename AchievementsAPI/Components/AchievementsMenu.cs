@@ -6,12 +6,11 @@ using System.Linq;
 using System.Reflection;
 using AchievementsAPI.API;
 using Il2CppInterop.Runtime.InteropTypes.Fields;
-using Reactor.Utilities;
-using Reactor.Utilities.Attributes;
-using Reactor.Utilities.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VentLib.Utilities;
+using VentLib.Utilities.Attributes;
 using Object = UnityEngine.Object;
 
 namespace AchievementsAPI
@@ -123,7 +122,7 @@ namespace AchievementsAPI
                 items.Add(uiElement);
             }
             if (!transform.GetChild(0).TryGetComponent<Image>(out var image)) return;
-            Coroutines.Start(FadeColor(image, image.color, tab.GetTabColor(), 0.3f));
+            Async.Execute(FadeColor(image, image.color, tab.GetTabColor(), 0.3f));
             progressBar.Value.fillMethod = Image.FillMethod.Horizontal;
             if (achievementCount != 0 || completedAchievementCount != 0) progressBar.Value.fillAmount = (float) completedAchievementCount / achievementCount;
             else

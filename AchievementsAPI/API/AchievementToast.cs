@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Il2CppInterop.Runtime.InteropTypes.Fields;
-using Reactor.Utilities;
-using Reactor.Utilities.Extensions;
 using Rewired.Utils;
 using UnityEngine.UI;
+using VentLib.Utilities;
 
 namespace AchievementsAPI.API;
 public class AchievementToast
@@ -13,12 +11,12 @@ public class AchievementToast
 
     public static void ShowAndDeleteToast(BaseAchievement achievement)
     {
-        Coroutines.Start(CoShowAndDeleteToast(achievement));
+        Async.Execute(CoShowAndDeleteToast(achievement));
     }
 
     public static void ShowAndDeleteToast(CountAchievement achievement, bool unlocked = false)
     {
-        Coroutines.Start(CoShowAndDeleteToast(achievement, unlocked));
+        Async.Execute(CoShowAndDeleteToast(achievement, unlocked));
     }
 
     private static Transform GetOrCreateToast()
@@ -104,7 +102,7 @@ public class AchievementToast
             img.m_Sprite = achievement.ToastBgSprite;
         }
 
-        yield return Coroutines.Start(CoAnimateAndDestroyToast());
+        yield return CoAnimateAndDestroyToast();
     }
 
     public static IEnumerator CoShowAndDeleteToast(CountAchievement achievement, bool unlocked = false)
@@ -139,6 +137,6 @@ public class AchievementToast
             img.m_Sprite = achievement.ToastBgSprite;
         }
 
-        yield return Coroutines.Start(CoAnimateAndDestroyToast());
+        yield return CoAnimateAndDestroyToast();
     }
 }
