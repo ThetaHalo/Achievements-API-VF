@@ -1,8 +1,6 @@
-﻿using AchievementsAPI;
-using AchievementsAPI.API;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace AchievementsAPI.MainMenu;
+namespace AchievementsAPI.Patches.MainMenu;
 
 public class AchievementsMenuOpen
 {
