@@ -9,9 +9,13 @@
         <Description>Achievements API for Among Us</Description>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <!-- <Authors>your name</Authors> -->
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <IncludeContentInPack>true</IncludeContentInPack>
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="../LICENSE" Pack="true" PackagePath="" />
+        <None Include="../README.md" Pack="true" PackagePath="" />
         <Reference Include="../VFC/VentFrameworkContinued.dll">
             <IncludeAssets>runtime; compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
