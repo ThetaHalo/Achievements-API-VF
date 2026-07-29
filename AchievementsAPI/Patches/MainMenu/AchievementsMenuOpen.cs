@@ -10,4 +10,10 @@ public class AchievementsMenuOpen
         menu.mainMenuManager = mainMenuManager;
         menu.gameObject.SetActive(true);
     }
+    public static void OpenMenu(OptionsMenuBehaviour optionsMenuBehaviour)
+    {
+        var menu = UnityEngine.Object.Instantiate(Assets.achievementPrefab).GetComponent<AchievementsMenu>();
+        menu.OptionsMenuBehaviour = optionsMenuBehaviour;
+        menu.gameObject.SetActive(true);
+    }
 }
