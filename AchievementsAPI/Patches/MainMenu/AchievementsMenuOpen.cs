@@ -1,6 +1,8 @@
-﻿namespace AchievementsAPI.Patches.MainMenu;
+﻿using UnityEngine;
 
-public static class AchievementsMenuOpen
+namespace AchievementsAPI.Patches.MainMenu;
+
+public class AchievementsMenuOpen
 {
     public static void OpenMenu(MainMenuManager mainMenuManager)
     {
