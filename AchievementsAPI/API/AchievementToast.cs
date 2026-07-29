@@ -3,6 +3,7 @@ using System.Collections;
 using Rewired.Utils;
 using UnityEngine.UI;
 using VentLib.Utilities;
+using VentLib.Utilities.Extensions;
 
 namespace AchievementsAPI.API;
 public class AchievementToast

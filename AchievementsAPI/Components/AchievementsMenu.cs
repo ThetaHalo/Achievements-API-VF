@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using VentLib.Utilities;
 using VentLib.Utilities.Attributes;
+using VentLib.Utilities.Extensions;
 using Object = UnityEngine.Object;
 
 namespace AchievementsAPI
